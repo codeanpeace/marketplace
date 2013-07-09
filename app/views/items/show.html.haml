@@ -1,0 +1,12 @@
+%h3= @item.name
+
+= image_tag "#{@item.image_url}"
+
+%div.not_in_stock= link_to @status, assign_item_path(@item.id), :remote => true
+
+%p= @item.description
+
+
+= link_to 'Edit', edit_item_path(@item)
+\|
+= link_to 'Back', items_path

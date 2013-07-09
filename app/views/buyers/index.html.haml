@@ -1,0 +1,17 @@
+%h1 Listing buyers
+
+%table
+  %tr
+    %th
+    %th
+    %th
+
+  - @buyers.each do |buyer|
+    %tr
+      %td= link_to 'Show', buyer
+      %td= link_to 'Edit', edit_buyer_path(buyer)
+      %td= link_to 'Destroy', buyer, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Buyer', new_buyer_path
